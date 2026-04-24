@@ -11,7 +11,14 @@ window.MathJax = {
   tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
   options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] },
   chtml: { scale: 0.92, matchFontHeight: false, minScale: 0.5 },
-  startup: { typeset: false }
+  startup: {
+    typeset: false,
+    ready() {
+      MathJax.startup.defaultReady();
+      window._mathJaxReady = true;
+      if (window._mathJaxCallback) window._mathJaxCallback();
+    }
+  }
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
@@ -426,20 +433,12 @@ function restartMiss() {
   loadCard();
 }
 buildCatBar();
-if (window.MathJax && MathJax.startup) {
-  MathJax.startup.promise.then(() => buildDeck());
+if (window._mathJaxReady) {
+  buildDeck();
 } else {
-  let waited = 0;
-  const poll = setInterval(() => {
-    waited += 50;
-    if (window.MathJax && MathJax.startup && MathJax.typesetPromise) {
-      clearInterval(poll);
-      MathJax.startup.promise.then(() => buildDeck());
-    } else if (waited > 5000) {
-      clearInterval(poll);
-      buildDeck();
-    }
-  }, 50);
+  window._mathJaxCallback = buildDeck;
+  // Fallback : si MathJax ne se charge pas en 6s, on lance quand même
+  setTimeout(() => { if (!window._mathJaxReady) buildDeck(); }, 6000);
 }
 </script>
 </body>
