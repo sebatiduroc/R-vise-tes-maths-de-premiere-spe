@@ -10,6 +10,7 @@
 window.MathJax = {
   tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
   options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] },
+  chtml: { scale: 0.92, matchFontHeight: false, minScale: 0.5 },
   startup: { typeset: false }
 };
 </script>
@@ -123,6 +124,27 @@ window.MathJax = {
   .summary-sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.6; }
   @keyframes cardIn { from { opacity:0; transform: translateY(12px) scale(0.98); } to { opacity:1; transform: translateY(0) scale(1); } }
   .card-scene.entering { animation: cardIn 0.35s ease; }
+
+  /* ── Responsive mobile ── */
+  .card-hint { overflow-x: auto; max-width: 100%; }
+  .card-formula { overflow-x: auto; max-width: 100%; }
+  mjx-container { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+  @media (max-width: 480px) {
+    header { padding: 1rem 1rem 0.75rem; }
+    .header-title { font-size: 1.15rem; }
+    .category-bar { padding: 0 0.8rem; }
+    .arena { padding: 0 0.8rem; }
+    .card-scene { height: 320px; }
+    .card-front-body { padding: 1.2rem 1rem; }
+    .card-back-body { padding: 1rem; }
+    .card-hint { font-size: 1.05rem; line-height: 1.4; }
+    .card-formula { font-size: 0.95rem; line-height: 1.6; }
+    .card-front-top, .card-back-top { padding: 0.75rem 1rem 0.5rem; }
+    .card-front-bottom { padding: 0.6rem 1rem; }
+    .assess-btn { font-size: 0.7rem; padding: 0.6rem 0.6rem; }
+    .nav-btn { padding: 0.5rem 0.9rem; font-size: 0.68rem; }
+    .stats-row { gap: 1rem; }
+  }
 </style>
 </head>
 <body>
