@@ -167,7 +167,7 @@ window.MathJax = {
     <div class="card-inner" id="cardInner">
       <div class="card-face card-front">
         <div class="card-front-top">
-          <span class="card-label-recto">Recto · Indice</span>
+          <span class="card-label-recto">Recto · Indice</span><span class="card-num" id="cardNum" style="font-family:'DM Mono',monospace;font-size:0.66rem;color:var(--muted);margin-left:0.4rem"></span>
           <span class="card-category-tag" id="catTag">—</span>
         </div>
         <div class="card-front-body"><div class="card-hint" id="hintText">Chargement…</div></div>
@@ -184,7 +184,7 @@ window.MathJax = {
       </div>
       <div class="card-face card-back">
         <div class="card-back-top">
-          <span class="card-label-verso">Verso · Formule attendue</span>
+          <span class="card-label-verso">Verso · Formule attendue</span><span class="card-num-back" id="cardNumBack" style="font-family:'DM Mono',monospace;font-size:0.66rem;color:rgba(255,255,255,0.35);margin-left:0.4rem"></span>
           <span class="card-category-tag" style="color:rgba(255,255,255,0.5);border-color:rgba(255,255,255,0.2)" id="catTagBack">—</span>
         </div>
         <div class="card-back-body"><div class="card-formula" id="formulaText">…</div></div>
@@ -371,6 +371,9 @@ function loadCard() {
   document.getElementById('formulaText').innerHTML = c.formula;
   document.getElementById('catTag').textContent = c.cat;
   document.getElementById('catTagBack').textContent = c.cat;
+  const globalNum = ALL_CARDS.indexOf(c) + 1;
+  document.getElementById('cardNum').textContent = '#' + globalNum;
+  document.getElementById('cardNumBack').textContent = '#' + globalNum;
   document.getElementById('deckLabel').textContent = activeCat.toUpperCase();
   isFlipped=false; assessed=false;
   document.getElementById('cardInner').classList.remove('flipped');
