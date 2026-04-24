@@ -226,16 +226,14 @@ const ALL_CARDS = [
   // SUITES
   {cat:"Suites", hint:"Terme général d'une suite arithmétique de raison \\(r\\) et de premier terme \\(u_0\\)", formula:"\\( u_n = u_0 + n\\,r \\)"},
   {cat:"Suites", hint:"Terme général d'une suite arithmétique à partir de \\(u_p\\)", formula:"\\( u_n = u_p + (n-p)\\,r \\)"},
-  {cat:"Suites", hint:"Sens de variation d'une suite arithmétique selon le signe de \\(r\\)", formula:"\\( r>0\\Rightarrow\\text{croissante}\\quad r<0\\Rightarrow\\text{décroissante}\\quad r=0\\Rightarrow\\text{constante} \\)"},
+  {cat:"Suites", hint:"Sens de variation d'une suite arithmétique selon le signe de \\(r\\)", formula:"\\( r>0\\Rightarrow\\text{croissante} \\\\[4pt] r<0\\Rightarrow\\text{décroissante} \\\\[4pt] r=0\\Rightarrow\\text{constante} \\)"},
   {cat:"Suites", hint:"Somme des \\(n+1\\) premiers termes d'une suite arithmétique", formula:"\\( u_0+u_1+\\cdots+u_n = \\dfrac{(n+1)(u_0+u_n)}{2} \\)"},
   {cat:"Suites", hint:"Somme \\(1 + 2 + \\cdots + n\\)", formula:"\\( 1+2+\\cdots+n = \\dfrac{n(n+1)}{2} \\)"},
   {cat:"Suites", hint:"Terme général d'une suite géométrique de raison \\(q\\) et de premier terme \\(u_0\\)", formula:"\\( u_n = u_0\\cdot q^n \\)"},
   {cat:"Suites", hint:"Terme général d'une suite géométrique à partir de \\(u_p\\)", formula:"\\( u_n = u_p\\cdot q^{n-p} \\)"},
-  {cat:"Suites", hint:"Sens de variation d'une suite géométrique à termes positifs", formula:"\\( q>1\\Rightarrow\\text{croissante}\\quad 0<q<1\\Rightarrow\\text{décroissante}\\quad q=1\\Rightarrow\\text{constante} \\)"},
+  {cat:"Suites", hint:"Sens de variation d'une suite géométrique à termes positifs", formula:"\\( q>1\\Rightarrow\\text{croissante} \\\\[4pt] 0<q<1\\Rightarrow\\text{décroissante} \\\\[4pt] q=1\\Rightarrow\\text{constante} \\)"},
   {cat:"Suites", hint:"Somme \\(1 + q + q^2 + \\cdots + q^n\\) (\\(q\\neq 1\\))", formula:"\\( 1+q+\\cdots+q^n = \\dfrac{1-q^{n+1}}{1-q} \\)"},
   {cat:"Suites", hint:"Somme des \\(n+1\\) premiers termes d'une suite géométrique (\\(q\\neq 1\\))", formula:"\\( u_0+u_1+\\cdots+u_n = u_0\\cdot\\dfrac{1-q^{n+1}}{1-q} \\)"},
-  {cat:"Suites", hint:"La suite \\((e^{na})_{n\\in\\mathbb{N}}\\) : quel type de suite est-ce ? Quelle raison ?", formula:"\\( e^{na}=(e^a)^n\\quad\\text{suite géométrique de raison }e^a \\)"},
-
   // SECOND DEGRÉ
   {cat:"Second degré", hint:"Discriminant \\(\\Delta\\) du trinôme \\(ax^2+bx+c\\)", formula:"\\( \\Delta = b^2 - 4ac \\)"},
   {cat:"Second degré", hint:"Nombre de racines réelles selon le signe de \\(\\Delta\\)", formula:"\\( \\Delta>0\\Rightarrow 2\\text{ racines}\\quad\\Delta=0\\Rightarrow 1\\quad\\Delta<0\\Rightarrow 0 \\)"},
@@ -244,9 +242,7 @@ const ALL_CARDS = [
   {cat:"Second degré", hint:"Factorisation du trinôme si \\(\\Delta > 0\\)", formula:"\\( ax^2+bx+c = a(x-x_1)(x-x_2) \\)"},
   {cat:"Second degré", hint:"Relations de Viète : somme et produit des racines", formula:"\\( x_1+x_2 = -\\dfrac{b}{a}\\qquad x_1 x_2 = \\dfrac{c}{a} \\)"},
   {cat:"Second degré", hint:"Forme canonique du trinôme et abscisse du sommet", formula:"\\( ax^2+bx+c = a\\!\\left(x+\\dfrac{b}{2a}\\right)^{\\!2}-\\dfrac{\\Delta}{4a}\\quad x_S=-\\dfrac{b}{2a} \\)"},
-  {cat:"Second degré", hint:"Identité pour la complétion du carré \\(x^2+2ax\\)", formula:"\\( x^2+2ax = (x+a)^2-a^2 \\)"},
-  {cat:"Second degré", hint:"Signe de \\(ax^2+bx+c\\) lorsque \\(\\Delta>0\\), avec \\(x_1<x_2\\)", formula:"\\( \\text{Signe opposé à }a\\text{ sur }]x_1,x_2[\\;,\\text{ signe de }a\\text{ en dehors} \\)"},
-
+  {cat:"Second degré", hint:"Signe de \\(ax^2+bx+c\\) lorsque \\(\\Delta>0\\) avec \\(x_1<x_2\\)", formula:"\\( \\text{Signe opposé à }a\\text{ sur }\\mathopen]x_1,x_2\\mathclose[\\text{, signe de }a\\text{ en dehors} \\)"},
   // DÉRIVÉES
   {cat:"Dérivées", hint:"Taux de variation de \\(f\\) entre \\(a\\) et \\(a+h\\)", formula:"\\( \\tau = \\dfrac{f(a+h)-f(a)}{h} \\)"},
   {cat:"Dérivées", hint:"Équation de la tangente à \\(\\mathcal{C}_f\\) au point d'abscisse \\(a\\)", formula:"\\( y = f'(a)(x-a)+f(a) \\)"},
@@ -254,35 +250,30 @@ const ALL_CARDS = [
   {cat:"Dérivées", hint:"Dérivée de \\(x^n\\) pour \\(n\\in\\mathbb{Z}\\)", formula:"\\( (x^n)'=n\\,x^{n-1} \\)"},
   {cat:"Dérivées", hint:"Dérivée de \\(\\sqrt{x}\\)", formula:"\\( (\\sqrt{x})'=\\dfrac{1}{2\\sqrt{x}}\\quad(x>0) \\)"},
   {cat:"Dérivées", hint:"Dérivée de \\(\\dfrac{1}{x}\\)", formula:"\\( \\left(\\dfrac{1}{x}\\right)'=-\\dfrac{1}{x^2} \\)"},
-  {cat:"Dérivées", hint:"Dérivée de \\(x^2\\) (à retrouver par définition avec le taux de variation)", formula:"\\( (x^2)'=2x \\)"},
+  {cat:"Dérivées", hint:"Dérivée de \\(x^2\\)", formula:"\\( (x^2)'=2x \\)"},
   {cat:"Dérivées", hint:"Dérivée de \\(x^3\\)", formula:"\\( (x^3)'=3x^2 \\)"},
   {cat:"Dérivées", hint:"Dérivée de la somme \\(u+v\\)", formula:"\\( (u+v)'=u'+v' \\)"},
   {cat:"Dérivées", hint:"Dérivée du produit \\(u\\times v\\)", formula:"\\( (uv)'=u'v+uv' \\)"},
   {cat:"Dérivées", hint:"Dérivée du quotient \\(\\dfrac{u}{v}\\)", formula:"\\( \\left(\\dfrac{u}{v}\\right)'=\\dfrac{u'v-uv'}{v^2} \\)"},
   {cat:"Dérivées", hint:"Dérivée de \\(k\\,u\\) (\\(k\\) constante)", formula:"\\( (ku)'=k\\,u' \\)"},
-  {cat:"Dérivées", hint:"Dérivée de \\(g(ax+b)\\) — composition avec une fonction affine", formula:"\\( [g(ax+b)]'=a\\,g'(ax+b) \\)"},
   {cat:"Dérivées", hint:"Lien entre le signe de \\(f'\\) et le sens de variation de \\(f\\)", formula:"\\( f'>0\\Rightarrow f\\text{ croissante}\\quad f'<0\\Rightarrow f\\text{ décroissante}\\quad f'=0\\Rightarrow f\\text{ constante} \\)"},
   {cat:"Dérivées", hint:"Nombre dérivé en un extremum local", formula:"\\( f\\text{ admet un extremum en }a\\Rightarrow f'(a)=0 \\)"},
-
-  // EXPONENTIELLE
-  {cat:"Exponentielle", hint:"Définition de exp : quelle équation différentielle + quelle condition initiale ?", formula:"\\( \\text{Unique fonction dérivable sur }\\mathbb{R}\\text{ vérifiant }f'=f\\text{ et }f(0)=1 \\)"},
   {cat:"Exponentielle", hint:"\\(e^0\\) et \\(e^1\\)", formula:"\\( e^0=1\\qquad e^1=e \\)"},
-  {cat:"Exponentielle", hint:"\\(e^{x+y}\\) en termes de produit", formula:"\\( e^{x+y}=e^x\\cdot e^y \\)"},
+  {cat:"Exponentielle", hint:"\\(e^{x+y}\\) = ?", formula:"\\( e^{x+y}=e^x\\cdot e^y \\)"},
   {cat:"Exponentielle", hint:"\\(e^x\\cdot e^{-x}\\)", formula:"\\( e^x\\cdot e^{-x}=1 \\)"},
-  {cat:"Exponentielle", hint:"\\(e^{x-y}\\) en termes de quotient", formula:"\\( e^{x-y}=\\dfrac{e^x}{e^y} \\)"},
+  {cat:"Exponentielle", hint:"\\(e^{x-y}\\) = ?", formula:"\\( e^{x-y}=\\dfrac{e^x}{e^y} \\)"},
   {cat:"Exponentielle", hint:"\\((e^x)^n\\) pour \\(n\\in\\mathbb{Z}\\)", formula:"\\( (e^x)^n=e^{nx} \\)"},
   {cat:"Exponentielle", hint:"Dérivée de \\(e^x\\)", formula:"\\( (e^x)'=e^x \\)"},
   {cat:"Exponentielle", hint:"Signe de \\(e^x\\) pour tout réel \\(x\\)", formula:"\\( e^x>0\\quad\\forall x\\in\\mathbb{R} \\)"},
   {cat:"Exponentielle", hint:"Sens de variation de \\(x\\mapsto e^x\\)", formula:"\\( x\\mapsto e^x\\text{ strictement croissante sur }\\mathbb{R} \\)"},
   {cat:"Exponentielle", hint:"Limite de \\(e^x\\) en \\(+\\infty\\) et en \\(-\\infty\\)", formula:"\\( \\lim_{x\\to+\\infty}e^x=+\\infty\\qquad\\lim_{x\\to-\\infty}e^x=0 \\)"},
-
   // TRIGONOMÉTRIE
   {cat:"Trigonométrie", hint:"Relation fondamentale entre \\(\\cos x\\) et \\(\\sin x\\)", formula:"\\( \\cos^2 x+\\sin^2 x=1 \\)"},
   {cat:"Trigonométrie", hint:"Valeurs remarquables en \\(0\\)", formula:"\\( \\cos 0=1\\qquad\\sin 0=0 \\)"},
   {cat:"Trigonométrie", hint:"Valeurs remarquables en \\(\\dfrac{\\pi}{6}\\)", formula:"\\( \\cos\\dfrac{\\pi}{6}=\\dfrac{\\sqrt{3}}{2}\\qquad\\sin\\dfrac{\\pi}{6}=\\dfrac{1}{2} \\)"},
   {cat:"Trigonométrie", hint:"Valeurs remarquables en \\(\\dfrac{\\pi}{4}\\)", formula:"\\( \\cos\\dfrac{\\pi}{4}=\\dfrac{\\sqrt{2}}{2}\\qquad\\sin\\dfrac{\\pi}{4}=\\dfrac{\\sqrt{2}}{2} \\)"},
-  {cat:"Trigonométrie", hint:"Valeurs remarquables en \\(\\dfrac{\\pi}{3}\\)", formula:"\\( \\cos\\dfrac{\\pi}{3}=\\dfrac{1}{2}\\qquad\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt{3}}{2} \\)"},
-  {cat:"Trigonométrie", hint:"Valeurs remarquables en \\(\\dfrac{\\pi}{2}\\)", formula:"\\( \\cos\\dfrac{\\pi}{2}=0\\qquad\\sin\\dfrac{\\pi}{2}=1 \\)"},
+  {cat:"Trigonométrie", hint:"Valeurs remarquables en \\(\\dfrac{\\pi}{3}\\)", formula:"\\( \\cos\\dfrac{\\pi}{3}=\\dfrac{1}{2} \\\\[8pt] \\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt{3}}{2} \\)"},
+  {cat:"Trigonométrie", hint:"Valeurs remarquables en \\(\\dfrac{\\pi}{2}\\)", formula:"\\( \\cos\\dfrac{\\pi}{2}=0 \\\\[8pt] \\sin\\dfrac{\\pi}{2}=1 \\)"},
   {cat:"Trigonométrie", hint:"Valeurs remarquables en \\(\\pi\\)", formula:"\\( \\cos\\pi=-1\\qquad\\sin\\pi=0 \\)"},
   {cat:"Trigonométrie", hint:"Parité de cosinus et de sinus", formula:"\\( \\cos(-x)=\\cos x\\text{ (paire)}\\qquad\\sin(-x)=-\\sin x\\text{ (impaire)} \\)"},
   {cat:"Trigonométrie", hint:"Période de cos et sin", formula:"\\( \\cos(x+2\\pi)=\\cos x\\qquad\\sin(x+2\\pi)=\\sin x\\quad(\\text{période }2\\pi) \\)"},
@@ -290,7 +281,6 @@ const ALL_CARDS = [
   {cat:"Trigonométrie", hint:"Cosinus et sinus de \\(\\pi-x\\)", formula:"\\( \\cos(\\pi-x)=-\\cos x\\qquad\\sin(\\pi-x)=\\sin x \\)"},
   {cat:"Trigonométrie", hint:"Dérivée de \\(\\cos x\\) et de \\(\\sin x\\)", formula:"\\( (\\cos x)'=-\\sin x\\qquad(\\sin x)'=\\cos x \\)"},
   {cat:"Trigonométrie", hint:"Conversion d'un angle en degrés vers les radians", formula:"\\( \\theta_{\\text{rad}}=\\theta°\\times\\dfrac{\\pi}{180} \\)"},
-
   // PRODUIT SCALAIRE
   {cat:"Produit scalaire", hint:"Produit scalaire \\(\\vec{u}\\cdot\\vec{v}\\) via l'angle", formula:"\\( \\vec{u}\\cdot\\vec{v}=\\|\\vec{u}\\|\\,\\|\\vec{v}\\|\\cos\\widehat{(\\vec{u},\\vec{v})} \\)"},
   {cat:"Produit scalaire", hint:"Produit scalaire en repère orthonormé (coordonnées)", formula:"\\( \\vec{u}\\cdot\\vec{v}=x_u x_v+y_u y_v \\)"},
@@ -299,9 +289,8 @@ const ALL_CARDS = [
   {cat:"Produit scalaire", hint:"Développement de \\(\\|\\vec{u}+\\vec{v}\\|^2\\)", formula:"\\( \\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+2\\,\\vec{u}\\cdot\\vec{v}+\\|\\vec{v}\\|^2 \\)"},
   {cat:"Produit scalaire", hint:"Développement de \\(\\|\\vec{u}-\\vec{v}\\|^2\\)", formula:"\\( \\|\\vec{u}-\\vec{v}\\|^2=\\|\\vec{u}\\|^2-2\\,\\vec{u}\\cdot\\vec{v}+\\|\\vec{v}\\|^2 \\)"},
   {cat:"Produit scalaire", hint:"Identité \\((\\vec{u}+\\vec{v})\\cdot(\\vec{u}-\\vec{v})\\)", formula:"\\( (\\vec{u}+\\vec{v})\\cdot(\\vec{u}-\\vec{v})=\\|\\vec{u}\\|^2-\\|\\vec{v}\\|^2 \\)"},
-  {cat:"Produit scalaire", hint:"Formule d'Al-Kashi (théorème des cosinus)", formula:"\\( BC^2=AB^2+AC^2-2\\,AB\\cdot AC\\cdot\\cos\\widehat{A} \\)"},
-  {cat:"Produit scalaire", hint:"Caractérisation du cercle de diamètre \\([AB]\\) via le produit scalaire", formula:"\\( \\overrightarrow{MA}\\cdot\\overrightarrow{MB}=0\\iff M\\text{ est sur le cercle de diamètre }[AB] \\)"},
-
+  {cat:"Produit scalaire", hint:"Formule d'Al-Kashi", formula:"\\( BC^2=AB^2+AC^2-2\\,AB\\cdot AC\\cdot\\cos\\widehat{A} \\)"},
+  {cat:"Produit scalaire", hint:"Caractérisation du cercle de diamètre \\([AB]\\) via le produit scalaire", formula:"\\( \\overrightarrow{MA}\\cdot\\overrightarrow{MB}=0 \\\\[6pt] \\iff M\\text{ est sur le cercle de diamètre }[AB] \\)"},
   // GÉOMÉTRIE REPÉRÉE
   {cat:"Géométrie repérée", hint:"Vecteur normal et vecteur directeur de la droite \\(ax+by+c=0\\)", formula:"\\( \\vec{n}(a\\,;b)\\text{ normal}\\qquad\\vec{d}(-b\\,;a)\\text{ directeur} \\)"},
   {cat:"Géométrie repérée", hint:"Équation cartésienne d'une droite connaissant un point \\(A(x_A,y_A)\\) et un vecteur normal \\(\\vec{n}(a,b)\\)", formula:"\\( a(x-x_A)+b(y-y_A)=0 \\)"},
@@ -309,22 +298,18 @@ const ALL_CARDS = [
   {cat:"Géométrie repérée", hint:"Distance entre deux points \\(A(x_A,y_A)\\) et \\(B(x_B,y_B)\\)", formula:"\\( AB=\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2} \\)"},
   {cat:"Géométrie repérée", hint:"Coordonnées du milieu \\(I\\) de \\([AB]\\)", formula:"\\( I=\\left(\\dfrac{x_A+x_B}{2}\\,;\\,\\dfrac{y_A+y_B}{2}\\right) \\)"},
   {cat:"Géométrie repérée", hint:"Axe de symétrie et sommet d'une parabole \\(y=ax^2+bx+c\\)", formula:"\\( \\text{Axe : }x=-\\dfrac{b}{2a}\\qquad\\text{Sommet : }S\\!\\left(-\\dfrac{b}{2a}\\,;\\,-\\dfrac{\\Delta}{4a}\\right) \\)"},
-
   // PROBABILITÉS CONDITIONNELLES
-  {cat:"Probabilités", hint:"Définition de la probabilité conditionnelle \\(P_A(B)\\)", formula:"\\( P_A(B)=P(B|A)=\\dfrac{P(A\\cap B)}{P(A)}\\quad(P(A)>0) \\)"},
+  {cat:"Probabilités", hint:"Définition de la probabilité conditionnelle \\(P_A(B)\\)", formula:"\\( P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}\\quad(P(A)>0) \\)"},
   {cat:"Probabilités", hint:"Règle du produit : \\(P(A\\cap B)\\) via un arbre pondéré", formula:"\\( P(A\\cap B)=P(A)\\cdot P_A(B) \\)"},
   {cat:"Probabilités", hint:"Probabilité du complémentaire \\(P(\\bar{A})\\)", formula:"\\( P(\\bar{A})=1-P(A) \\)"},
   {cat:"Probabilités", hint:"Probabilité de la réunion \\(P(A\\cup B)\\)", formula:"\\( P(A\\cup B)=P(A)+P(B)-P(A\\cap B) \\)"},
-  {cat:"Probabilités", hint:"Définition de l'indépendance de deux événements", formula:"\\( A\\text{ et }B\\text{ indépendants}\\iff P(A\\cap B)=P(A)\\cdot P(B) \\)"},
-  {cat:"Probabilités", hint:"Formule des probabilités totales avec partition \\(\\{B_1,B_2\\}\\)", formula:"\\( P(A)=P(B_1)\\cdot P_{B_1}(A)+P(B_2)\\cdot P_{B_2}(A) \\)"},
-
+  {cat:"Probabilités", hint:"Définition de l'indépendance de deux événements", formula:"\\( A\\text{ et }B\\text{ indépendants} \\\\[6pt] \\iff P(A\\cap B)=P(A)\\cdot P(B) \\)"},
   // VARIABLES ALÉATOIRES
   {cat:"Variables aléatoires", hint:"Espérance d'une variable aléatoire \\(X\\) discrète finie", formula:"\\( E(X)=\\sum_i x_i\\,p_i \\)"},
   {cat:"Variables aléatoires", hint:"Variance de \\(X\\) — formule de König-Huygens", formula:"\\( V(X)=E(X^2)-[E(X)]^2 \\)"},
   {cat:"Variables aléatoires", hint:"Variance de \\(X\\) — définition directe", formula:"\\( V(X)=\\sum_i(x_i-E(X))^2\\,p_i \\)"},
   {cat:"Variables aléatoires", hint:"\\(E(X^2)\\) : comment le calcule-t-on ?", formula:"\\( E(X^2)=\\sum_i x_i^2\\,p_i \\)"},
   {cat:"Variables aléatoires", hint:"Écart-type de \\(X\\)", formula:"\\( \\sigma(X)=\\sqrt{V(X)} \\)"},
-  {cat:"Variables aléatoires", hint:"Concentration des moyennes d'échantillons : encadrement à 95 % autour de \\(\\mu\\)", formula:"\\( |\\bar{x}-\\mu|\\leq\\dfrac{2\\sigma}{\\sqrt{n}}\\quad\\text{dans environ 95 % des cas} \\)"},
 ];
 
 const CATS = ['Toutes', ...new Set(ALL_CARDS.map(c => c.cat))];
