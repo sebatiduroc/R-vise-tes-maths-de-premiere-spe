@@ -358,8 +358,11 @@ function loadCard() {
   document.getElementById('progressFill').style.width=(idx/deck.length*100)+'%';
   document.getElementById('progressLabel').textContent=(idx+1)+' / '+deck.length;
   updateStats();
-  if (window.MathJax&&MathJax.typesetPromise)
-    MathJax.typesetPromise([document.getElementById('hintText'),document.getElementById('formulaText')]).catch(()=>{});
+  if (window.MathJax && MathJax.typesetPromise) {
+    const els = [document.getElementById('hintText'), document.getElementById('formulaText')];
+    MathJax.typesetClear(els);
+    MathJax.typesetPromise(els).catch(() => {});
+  }
   startTimer();
 }
 
