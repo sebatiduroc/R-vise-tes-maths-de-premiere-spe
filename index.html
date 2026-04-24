@@ -415,7 +415,22 @@ function restartMiss() {
   document.getElementById('mainArena').style.display='flex';
   loadCard();
 }
-buildCatBar(); buildDeck();
+buildCatBar();
+if (window.MathJax && MathJax.startup) {
+  MathJax.startup.promise.then(() => buildDeck());
+} else {
+  let waited = 0;
+  const poll = setInterval(() => {
+    waited += 50;
+    if (window.MathJax && MathJax.startup && MathJax.typesetPromise) {
+      clearInterval(poll);
+      MathJax.startup.promise.then(() => buildDeck());
+    } else if (waited > 5000) {
+      clearInterval(poll);
+      buildDeck();
+    }
+  }, 50);
+}
 </script>
 </body>
 </html>
